@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Sapna ❤️</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.content {
+    max-width: 500px;
+    animation: fadeIn 2s ease;
+}
+
+.small {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 28px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+.heart {
+    font-size: 55px;
+    animation: heartbeat 1.5s infinite;
+    margin: 20px;
+}
+
+.warning {
+    color: #ffcc66;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.line {
+    width: 70px;
+    height: 1px;
+    background: white;
+    margin: 25px auto;
+}
+
+.name {
+    font-size: 55px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #fff, #ffb6c1, #fff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.final {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+
+<section class="screen" id="opening">
+
+    <div class="content">
+
+        <div class="small">A LITTLE SOMETHING FOR</div>
+
+        <div class="name">Sapna</div>
+
+        <div class="heart">❤️</div>
+
+        <p>
+            This isn't an expensive gift.
+            <br>
+            It's just a few words from your annoying brother.
+        </p>
+
+        <button onclick="startGift()">
+            🎁 Open Your Gift
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FUNNY SECTION -->
+
+<section class="screen hidden" id="funny">
+
+    <div class="content">
+
+        <div class="warning">
+            ⚠️ IMPORTANT WARNING ⚠️
+        </div>
+
+        <h2>Proceed carefully...</h2>
+
+        <div class="line"></div>
+
+        <p>
+            This website contains:
+            <br><br>
+            10% emotions ❤️
+            <br>
+            40% memories
+            <br>
+            50% brother's nonsense 😂
+        </p>
+
+        <button onclick="showEmotional()">
+            Okay... Continue
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- EMOTIONAL SECTION -->
+
+<section class="screen hidden" id="emotional">
+
+    <div class="content">
+
+        <div class="small">BUT SERIOUSLY...</div>
+
+        <h2>Sapna,</h2>
+
+        <div class="line"></div>
+
+        <p>
+            Life keeps changing.
+            <br><br>
+            We grow up,
+            get busy,
+            fight over stupid things,
+            annoy each other...
+            <br><br>
+            But some bonds don't really change.
+        </p>
+
+        <button onclick="showFinal()">
+            One Last Thing ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="screen hidden" id="final">
+
+    <div class="content">
+
+        <div class="heart">❤️</div>
+
+        <h2 class="final">
+            Happy Raksha Bandhan,
+            <br>
+            Sapna
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+            No matter how much we fight,
+            <br>
+            no matter how much I annoy you,
+            <br><br>
+            I'll always be your brother.
+            ❤️
+            <br><br>
+            — Rohit
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function hideAll() {
+    document.getElementById("opening").classList.add("hidden");
+    document.getElementById("funny").classList.add("hidden");
+    document.getElementById("emotional").classList.add("hidden");
+    document.getElementById("final").classList.add("hidden");
+}
+
+function startGift() {
+    hideAll();
+    document.getElementById("funny").classList.remove("hidden");
+}
+
+function showEmotional() {
+    hideAll();
+    document.getElementById("emotional").classList.remove("hidden");
+}
+
+function showFinal() {
+    hideAll();
+    document.getElementById("final").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
